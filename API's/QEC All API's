@@ -1,0 +1,1235 @@
+{
+	"info": {
+		"_postman_id": "534f80b9-e260-435c-8fb2-d523628bfe00",
+		"name": "QEC/API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37278387"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sajawal Nawaz\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"sajawal07nawaz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"User@gmail.com\",\r\n    \"password\":\"123456\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send verification code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sajawal07nawaz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-email-verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sajawal07nawaz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-email-verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot-password-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sajawal07nawaz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-email-verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recover-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sajawal07nawaz@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-email-verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MywiaWF0IjoxNzI2MDU2ODc0LCJleHAiOjE3MjY2NjE2NzR9.WAt20a6epqcIIaHvp0BwRgF_tl29PAh_f-j-TODeuf0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldpassowrd\": \"123456\",\r\n    \"newpassword\": \"0987654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MywiaWF0IjoxNzI2MDU2ODc0LCJleHAiOjE3MjY2NjE2NzR9.WAt20a6epqcIIaHvp0BwRgF_tl29PAh_f-j-TODeuf0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldpassowrd\": \"123456\",\r\n    \"newpassword\": \"0987654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-current-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MywiaWF0IjoxNzI2MDU2ODc0LCJleHAiOjE3MjY2NjE2NzR9.WAt20a6epqcIIaHvp0BwRgF_tl29PAh_f-j-TODeuf0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldpassowrd\": \"123456\",\r\n    \"newpassword\": \"0987654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/current-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add-category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2MjQ4NTA3LCJleHAiOjE3MjY4NTMzMDd9.eXke7DdFyNH80qIlQmx97KbEW3LnX_ji7IYZ4J04bvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Blog 1\",\r\n    \"desc\" : \"Blog Desc 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2MjQ4NTA3LCJleHAiOjE3MjY4NTMzMDd9.eXke7DdFyNH80qIlQmx97KbEW3LnX_ji7IYZ4J04bvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Blog 1\",\r\n    \"desc\" : \"Blog Desc 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/category/66e476bb87650ac5ba510220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"66e476bb87650ac5ba510220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2MjQ4NTA3LCJleHAiOjE3MjY4NTMzMDd9.eXke7DdFyNH80qIlQmx97KbEW3LnX_ji7IYZ4J04bvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Blog 1\",\r\n    \"desc\" : \"Blog Desc 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/category/66e476bb87650ac5ba510220",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"66e476bb87650ac5ba510220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2MjQ4NTA3LCJleHAiOjE3MjY4NTMzMDd9.eXke7DdFyNH80qIlQmx97KbEW3LnX_ji7IYZ4J04bvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdetail-category-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2MjQ4NTA3LCJleHAiOjE3MjY4NTMzMDd9.eXke7DdFyNH80qIlQmx97KbEW3LnX_ji7IYZ4J04bvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file",
+			"item": [
+				{
+					"name": "upload-file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2NDcwMDEwLCJleHAiOjE3MjcwNzQ4MTB9.ZXEUCnGjeEu2i6zu-4rm9Q0jzzm8iVY-_h2tyMMdyPo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef7587e-8946-49d0-940d-3fc40e77db31"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/file/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signed-url",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2NDcwMDEwLCJleHAiOjE3MjcwNzQ4MTB9.ZXEUCnGjeEu2i6zu-4rm9Q0jzzm8iVY-_h2tyMMdyPo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef7587e-8946-49d0-940d-3fc40e77db31"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/file/signed-url?key=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"file",
+								"signed-url"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzI2NDcwMDEwLCJleHAiOjE3MjcwNzQ4MTB9.ZXEUCnGjeEu2i6zu-4rm9Q0jzzm8iVY-_h2tyMMdyPo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef7587e-8946-49d0-940d-3fc40e77db31"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/file/delete?key=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"file",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post-blog",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post/66f0f8a59ce3a43ab20e90ac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"66f0f8a59ce3a43ab20e90ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Form",
+			"item": [
+				{
+					"name": "faculty_resume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sajawal Nawaz\",\r\n    \"personal\": \"personal is Required\",\r\n    \"experience\": \"experience is Required\",\r\n    \"memberships\": \"memberships is Required\",\r\n    \"service\": \"service is Required\",\r\n    \"brief_statement_of_research\": \"Brief_statement_of_research is Required\",\r\n    \"publications\": \"publications is Required\",\r\n    \"research_grants\": \"research_grants is Required\",\r\n    \"selected_professional_presentation\": \"selected_professional_presentation is Required\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/form/faculty_resume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"faculty_resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "faculty_resume Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sajawal Nawaz\",\r\n    \"personal\": \"personal is Required\",\r\n    \"experience\": \"experience is Required\",\r\n    \"memberships\": \"memberships is Required\",\r\n    \"service\": \"service is Required\",\r\n    \"brief_statement_of_research\": \"Brief_statement_of_research is Required\",\r\n    \"publications\": \"publications is Required\",\r\n    \"research_grants\": \"research_grants is Required\",\r\n    \"selected_professional_presentation\": \"selected_professional_presentation is Required\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/form/faculty_resume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"faculty_resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_faculty_resume",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilawal Nawaz\",\r\n    \"personal\": \"personal \",\r\n    \"experience\": \"experience\",\r\n    \"memberships\": \"memberships\",\r\n    \"service\": \"service is Required\",\r\n    \"brief_statement_of_research\": \"Brief_statement_of_research\",\r\n    \"publications\": \"publications\",\r\n    \"research_grants\": \"research_grants is Required\",\r\n    \"selected_professional_presentation\": \"selected_profes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/form/update_faculty_resume/673b12003b51f89c7a477a19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"update_faculty_resume",
+								"673b12003b51f89c7a477a19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_faculty_resume",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/form/delete_faculty_resume/673b12003b51f89c7a477a19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"form",
+								"delete_faculty_resume",
+								"673b12003b51f89c7a477a19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PHDpassout",
+			"item": [
+				{
+					"name": "addphdpassout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/phd/phdpassout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"phd",
+								"phdpassout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_phpassout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/phd/get_phdpassout?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"phd",
+								"get_phdpassout"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_phdpassout",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhtar Nawaz\",\r\n    \"degree_title\": \"Degree title is required\",\r\n    \"doa\": \"Date of admission is required\",\r\n    \"doc\": \"Date of completion is required\",\r\n    \"thesis_title\": \"Thesis title is required\",\r\n    \"supervisor\": \"Supervisor name is required\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/phd/update_phdpassout/6742ecc2f0af8947b3ea04a3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"phd",
+								"update_phdpassout",
+								"6742ecc2f0af8947b3ea04a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_phdpassout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/phd/delete_phdpassout/6742ecc6f0af8947b3ea04a5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"phd",
+								"delete_phdpassout",
+								"6742ecc6f0af8947b3ea04a5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS/MPHIL",
+			"item": [
+				{
+					"name": "addmsmphilpassout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMyNjE0MDI3LCJleHAiOjE3MzMyMTg4Mjd9.ar9uJ8YPioM8aAI6zFyg7by5R44mePBvULBT_gg9Sy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bilawal Nawaz\",\r\n    \"degree_title\": \"Software Engneering\",\r\n    \"doa\": \"2024-01-01\",\r\n    \"doc\": \"2028-01-01\",\r\n    \"thesis_title\": \"Qec Web Portal\",\r\n    \"supervisor\": \"Sir Jamal Ud Din\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ms-mphil/ms-mphil-passout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ms-mphil",
+								"ms-mphil-passout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_msmphilassout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMyNjE0MDI3LCJleHAiOjE3MzMyMTg4Mjd9.ar9uJ8YPioM8aAI6zFyg7by5R44mePBvULBT_gg9Sy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ms-mphil/get_ms-mphil-passout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ms-mphil",
+								"get_ms-mphil-passout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_phdpassout",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMxOTI0MzY3LCJleHAiOjE3MzI1MjkxNjd9.2BEMH7VvAv1LFlm27vlHl6y8dFKzumxPPr3idjGHzEA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Akhtar Nawaz\",\r\n    \"degree_title\": \"Degree title is required\",\r\n    \"doa\": \"Date of admission is required\",\r\n    \"doc\": \"Date of completion is required\",\r\n    \"thesis_title\": \"Thesis title is required\",\r\n    \"supervisor\": \"Supervisor name is required\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/phd/update_phdpassout/6742ecc2f0af8947b3ea04a3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"phd",
+								"update_phdpassout",
+								"6742ecc2f0af8947b3ea04a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_phdpassout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRlZGUyNTczOTBkYTRjODkzZmIwZGIiLCJuYW1lIjoiU2FqYXdhbCBOYXdheiBBd2FuICIsImVtYWlsIjoic2FqYXdhbDA3bmF3YXpAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzMyNjE0MDI3LCJleHAiOjE3MzMyMTg4Mjd9.ar9uJ8YPioM8aAI6zFyg7by5R44mePBvULBT_gg9Sy8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ms-mphil/delete_ms-mphil-passout/67459901660d91260c827c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ms-mphil",
+								"delete_ms-mphil-passout",
+								"67459901660d91260c827c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
